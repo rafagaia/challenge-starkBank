@@ -1,6 +1,6 @@
 # dependencies
 /node_modules
-
+/secrets
 # misc
 .DS_Store
 .env
