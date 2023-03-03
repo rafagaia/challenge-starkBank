@@ -9,7 +9,10 @@ app.use(helmet());
 
 // Allow BASE URL - Sandbox
 app.use(cors({
-    origin: 'https://sandbox.api.starkbank.com',
+    origin: [
+        'https://localhost:4242',
+        'https://sandbox.api.starkbank.com'
+    ],
 }));
 
 /*

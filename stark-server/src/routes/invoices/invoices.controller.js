@@ -1,5 +1,5 @@
 async function httpIssueInvoice(req, res) {
-    return res.status(200).json({"invoice": "success"});
+    return res.status(202).json({"invoice": "success"});
 }
 
 
