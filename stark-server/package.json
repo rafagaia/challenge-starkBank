@@ -1,0 +1,27 @@
+{
+    "name": "invoice-management",
+    "version": "0.0.1",
+    "description": "Invoice and Transfers powered by StarkBank",
+    "main": "src/server.js",
+    "scripts": {
+        "start": "node src/server.js",
+        "test": "jest",
+        "cluster": "pm2 start src/server.js -i max"
+    },
+    "author": "rafaelvsgaia@gmail.com",
+    "license": "MIT",
+    "jest": {
+        "testEnvironment": "node"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.1",
+        "express": "^4.18.1",
+        "helmet": "^6.0.1",
+        "pm2": "^5.2.0"
+    },
+    "devDependencies": {
+        "jest": "^28.1.1",
+        "supertest": "^6.2.3"
+    }
+}
