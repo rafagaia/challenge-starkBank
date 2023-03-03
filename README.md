@@ -30,6 +30,9 @@ Author: Rafael Gaia</br>
 </br>
 4. Bonus: Deploy application in the cloud (such as AWS, GCP, or Azure).</br>
 4.1. Bonus: find issues on Stark Bank public code or API.</br>
+4.1.1. Invoice can be created with an unregistered customer and taxId. Registers customer.
+4.1.2. Invoice creation with existing customer taxId and new name overwrites previous customer name.
+4.1.3. Customer name-length can be abnormously big, and contain special characters such as $!@(...).
 4.2. Have fun and good luck!</br>
 </br>
 
