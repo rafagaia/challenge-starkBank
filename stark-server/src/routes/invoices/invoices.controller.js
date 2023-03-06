@@ -1,3 +1,7 @@
+const {
+    issueTransfer
+} = require('../../models/transfers.model');
+
 /*
 *   handles /POST /webhook/invoices
 *   event.subscription = "invoice",
@@ -8,17 +12,23 @@ async function hookInvoices(req, res) {
     // check event log type "credited"
     switch (invoice["event"]["log"]["type"]) {
         case "created":
-            console.log("created. Dope!");
+            console.log("created.");
             break;
         case "paid":
-            console.log("paid. Yay!");
+            console.log("paid.");
             break;
         case "credited":
-            console.log("credited - make transfer");
-            // emit transfer event
+            console.log("credited => make transfer");
+            await issueTransfer(invoice["event"]["log"].invoice);
+            break;
+        case "voided":
+            console.log("voided. why? what to do?"); //@TODO: ask StarkBank developers
+            break;
+        case "canceled":
+            console.log("canceled. need to re-create?"); //@TODO: ask StarkBank developers
             break;
         default:
-            console.log("none");
+            console.log("hookInvoice Default case");
     }
     return res.status(200).json({"status": "OK - Invoices Event Webhook received."});
 }

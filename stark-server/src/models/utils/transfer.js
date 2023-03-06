@@ -2,6 +2,15 @@ const starkbank = require('starkbank');
 const random = require('./random.js');
 const uniqueId = require('./uniqueId.js').uniqueId;
 
+/*
+a. bank code: 20018183 
+b. branch: 0001 
+c. account: 6341320293482496 
+d. name: Stark Bank S.A. 
+e. tax ID: 20.018.183/0001-80 
+f. account type: payment 
+*/
+
 
 let choice = function (a, b) {
     let rand = random.randomInt(0,1);
@@ -12,17 +21,17 @@ let choice = function (a, b) {
 }
 
 
-exports.generateExampleTransfersJson = function (n, amount = null, tomorrow = false) {
+exports.generateTransfersJson = function (n, amount = null, tomorrow = false) {
     
     let exampleTransfer = {
-        amount: 10,
-        name: 'João da Silva',
-        taxId: '01234567890',
-        bankCode: '18236120',
-        branchCode: '0001',
-        accountNumber: '10000-0',
-        accountType: 'checking',
-        description: choice(null, 'Test description'),
+        amount: amount,
+        name: 'Stark Bank S.A.', //OK
+        taxId: '20.018.183/0001-80', //OK
+        bankCode: '20018183', //OK
+        branchCode: '0001', //OK
+        accountNumber: '6341320293482496', //OK
+        accountType: 'payment', //OK
+        description: choice(null, 'Rafa\'s Backend Challenge.'),
         rules: [
             new starkbank.transfer.Rule({
                 key: 'resendingLimit', 
@@ -33,24 +42,7 @@ exports.generateExampleTransfersJson = function (n, amount = null, tomorrow = fa
 
     let transfers = [];
     
-    let scheduled = null;
-    if (tomorrow) {
-        scheduled = new Date();
-        scheduled.setDate(scheduled.getDate() + 1);
-        scheduled = choice(scheduled.toISOString().substring(0, 10), scheduled.toISOString().replace('Z','+00:00'));
-    }
+    transfers.push(new starkbank.Transfer(exampleTransfer));
 
-    for (let i = 0; i < n; i++) {
-        let transferAmount = Math.floor(amount);
-        if (!amount) {
-            transferAmount = random.randomInt(5, 1000);
-        }
-        exampleTransfer.name = 'Jon Snow';
-        exampleTransfer.amount = transferAmount;
-        exampleTransfer.taxId = '012.345.678-90';
-        exampleTransfer.scheduled = scheduled;
-        exampleTransfer.externalId = 'node-' + uniqueId();
-        transfers.push(new starkbank.Transfer(exampleTransfer));
-    }
     return transfers;
 };

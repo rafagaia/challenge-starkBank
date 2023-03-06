@@ -1,13 +1,12 @@
 const { issueRandomInvoices } = require('../models/invoices.model');
 
 
-// @TODO: replace for above function "issueRandomInvoices"
 async function emitInvoice() {
     console.log('Invoice Emitter...');
     await issueRandomInvoices();
 }
 
-async function scheduleEmitInvoice() {
+async function scheduleEmitInvoices() {
     const initialDelay = 5 * 1000;
     const interval = 3 * 60 * 60 * 1000; // 3 hours in miliseconds
     const duration = 24 * 60 * 60 * 1000; // 24 hours in miliseconds
@@ -27,5 +26,5 @@ async function scheduleEmitInvoice() {
 }
 
 module.exports = {
-    scheduleEmitInvoice
+    scheduleEmitInvoices
 }
