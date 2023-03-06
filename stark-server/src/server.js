@@ -2,6 +2,7 @@ require('dotenv').config();
 const fs = require('fs');
 const https = require('https');
 const app = require('./app');
+const { scheduleEmitInvoice } = require('./tasks/invoice.emitter');
 
 
 const httpsServer = https.createServer({
@@ -18,3 +19,4 @@ async function startupServer() {
 }
 
 startupServer();
+scheduleEmitInvoice();
