@@ -3,7 +3,7 @@ const {
 } = require('../../models/transfers.model');
 
 /*
-*   handles /POST /webhook/invoices
+*   handles POST /webhook/invoices
 *   event.subscription = "invoice",
 *   event.log.type = "created" || "paid" || "credited"
 */

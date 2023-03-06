@@ -31,6 +31,7 @@ exports.generateTransfersJson = function (n, amount = null, tomorrow = false) {
         branchCode: '0001', //OK
         accountNumber: '6341320293482496', //OK
         accountType: 'payment', //OK
+        externalId: 'node-' + uniqueId(),
         description: choice(null, 'Rafa\'s Backend Challenge.'),
         rules: [
             new starkbank.transfer.Rule({
