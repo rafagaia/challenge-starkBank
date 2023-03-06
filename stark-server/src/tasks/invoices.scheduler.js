@@ -2,7 +2,7 @@ const { issueRandomInvoices } = require('../models/invoices.model');
 
 
 async function emitInvoice() {
-    console.log('Invoice Emitter...');
+    console.log(`Invoices being emitted...\n${Date.now()}\n`);
     await issueRandomInvoices();
 }
 
@@ -13,13 +13,15 @@ async function scheduleEmitInvoices() {
 
     const startTime = Date.now();
 
+    console.log("Invoice Scheduler Starting...");
     async function run() {
-        console.log("Invoice Scheduler Starting...");
         const elapsedTime  = Date.now() - startTime;
         if (elapsedTime < duration) {
             await emitInvoice();
             // Schedule the next run after the interval
             setTimeout(run, interval);
+        } else {
+            console.log(`\n*****Invoices Completed - for a total duration of: ${duration}******\n`);
         }
     }
     setTimeout(run, initialDelay);

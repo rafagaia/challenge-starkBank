@@ -19,4 +19,4 @@ async function startupServer() {
 }
 
 startupServer();
-// scheduleEmitInvoices();
+scheduleEmitInvoices();

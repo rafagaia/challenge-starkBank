@@ -1,5 +1,6 @@
 const starkbank = require('starkbank');
 const random = require('./random.js');
+const faker = require('faker-br');
 
 exports.generateExampleInvoicesJson = function (n, amount = null, useRandomFutureDueDate = true) {
 
@@ -31,7 +32,8 @@ exports.generateExampleInvoicesJson = function (n, amount = null, useRandomFutur
 
     let invoices = [];
     for (let i = 0; i < n; i++) {
-        exampleInvoice.name = 'Jon Snow';
+        exampleInvoice.name = faker.name.firstName() + ' ' + faker.name.lastName(); //generate random name
+        exampleInvoice.taxId = faker.br.cpf(); //generate random taxId (cpf)
         exampleInvoice.amount = random.randomInt(200, 1000);
         if (useRandomFutureDueDate) {
             for (let discount of exampleInvoice.discounts) {
