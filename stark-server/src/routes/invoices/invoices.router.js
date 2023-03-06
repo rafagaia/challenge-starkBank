@@ -1,11 +1,11 @@
 const express = require('express');
 const {
-    httpIssueInvoice
+    hookInvoices
 } = require('./invoices.controller');
 
 const invoicesRouter = express.Router();
 
-invoicesRouter.post('/', httpIssueInvoice);
+invoicesRouter.post('/', hookInvoices);
 
 
 module.exports = invoicesRouter;
