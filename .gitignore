@@ -1,7 +1,7 @@
 # dependencies
-/node_modules
-/secrets
-/snippets
+node_modules
+secrets
+snippets
 # misc
 .DS_Store
 .env
