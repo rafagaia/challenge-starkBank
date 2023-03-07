@@ -9,6 +9,7 @@ const {
 */
 async function hookInvoices(req, res) {
     console.log("\n******Invoices Hook******\n");
+    console.log(`req body: ${JSON.stringify(req.body)}`);
     const invoice = req.body;
     // check event log type "credited"
     switch (invoice["event"]["log"]["type"]) {

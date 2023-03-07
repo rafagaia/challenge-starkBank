@@ -1,0 +1,53 @@
+{
+    "event": {
+      "created": "2023-03-06T08:32:26.588727+00:00",
+      "id": "4865692356575232",
+      "log": {
+        "created": "2023-03-06T08:31:16.559602+00:00",
+        "errors": [],
+        "id": "6687369314959360",
+        "invoice": {
+          "amount": 260,
+          "brcode": "00020101021226890014br.gov.bcb.pix2567brcode-h.sandbox.starkinfra.com/v2/2daf5f0b281c418599f732b7d9b5bce85204000053039865802BR5925Stark Bank S.A. - Institu6009Sao Paulo62070503***6304D0EC",
+          "created": "2023-03-06T08:26:41.285374+00:00",
+          "descriptions": [
+            {
+              "key": "Field1",
+              "value": "Something"
+            }
+          ],
+          "discountAmount": 28,
+          "discounts": [
+            {
+              "due": "2023-08-24T00:19:09.576000+00:00",
+              "percentage": 10
+            }
+          ],
+          "due": "2023-09-22T08:30:21.395000+00:00",
+          "expiration": 123456789,
+          "fee": 0,
+          "fine": 2.5,
+          "fineAmount": 0,
+          "id": "4687037856743424",
+          "interest": 1.3,
+          "interestAmount": 0,
+          "link": "https://challenge948435.sandbox.starkbank.com/invoicelink/2daf5f0b281c418599f732b7d9b5bce8",
+          "name": "Jeremias Silva",
+          "nominalAmount": 288,
+          "pdf": "https://sandbox.api.starkbank.com/v2/invoice/2daf5f0b281c418599f732b7d9b5bce8.pdf",
+          "status": "paid",
+          "tags": [
+            "war supply",
+            "invoice #1234",
+            "e01039011202303060830ykbkkydrw7g"
+          ],
+          "taxId": "628.607.444-95",
+          "transactionIds": [],
+          "updated": "2023-03-06T08:31:16.559645+00:00"
+        },
+        "type": "paid"
+      },
+      "subscription": "invoice",
+      "workspaceId": "6245882458537984"
+    }
+  }

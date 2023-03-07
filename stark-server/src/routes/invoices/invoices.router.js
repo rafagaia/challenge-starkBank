@@ -5,7 +5,17 @@ const {
 
 const invoicesRouter = express.Router();
 
-invoicesRouter.post('/', hookInvoices);
+
+function validateInvoice(req, res, next) {
+    if (req.body["event"]["workspaceId"] == process.env.WORKSPACE_ID) {
+        next();
+    } else {
+        return res.status(406).json({"error": "wrong WorkspaceId."});
+    }
+}
+
+
+invoicesRouter.post('/', validateInvoice, hookInvoices);
 
 
 module.exports = invoicesRouter;
