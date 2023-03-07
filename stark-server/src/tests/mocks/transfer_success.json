@@ -1,0 +1,41 @@
+{
+  "event": {
+    "created": "2023-03-06T09:32:01.795709+00:00",
+    "id": "6744552475983872",
+    "log": {
+      "created": "2023-03-06T09:32:01.498679+00:00",
+      "errors": [],
+      "id": "4900076937805824",
+      "transfer": {
+        "accountNumber": "6341320293482496",
+        "accountType": "payment",
+        "amount": 837,
+        "bankCode": "20018183",
+        "branchCode": "0001",
+        "created": "2023-03-06T09:31:54.944396+00:00",
+        "description": "Rafa's Backend Challenge.",
+        "externalId": "node-x0zejem5ypetiin8",
+        "fee": 0,
+        "id": "4853443743186944",
+        "name": "Stark Bank S.A.",
+        "rules": [
+          {
+            "key": "resendingLimit",
+            "value": 5
+          }
+        ],
+        "scheduled": "2023-03-06T09:31:54.831316+00:00",
+        "status": "success",
+        "tags": [],
+        "taxId": "20.018.183/0001-80",
+        "transactionIds": [
+          "49943666573626934644033175442334"
+        ],
+        "updated": "2023-03-06T09:32:01.498781+00:00"
+      },
+      "type": "success"
+    },
+    "subscription": "transfer",
+    "workspaceId": ""
+  }
+}

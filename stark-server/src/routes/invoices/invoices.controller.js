@@ -8,10 +8,8 @@ const {
 *   event.log.type = "created" || "paid" || "credited"
 */
 async function hookInvoices(req, res) {
-    console.log("\n******Invoices Hook******\n");
-    console.log(`req body: ${JSON.stringify(req.body)}`);
+    console.log("******Invoices Hook******");
     const invoice = req.body;
-    // check event log type "credited"
     switch (invoice["event"]["log"]["type"]) {
         case "created":
             console.log("created.");
