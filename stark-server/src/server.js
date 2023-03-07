@@ -16,7 +16,8 @@ async function startupServer() {
     httpsServer.listen(PORT, () => {
         console.log(`Server Listening on Port: ${PORT}...`);
     });
+    
+    scheduleEmitInvoices();
 }
 
 startupServer();
-scheduleEmitInvoices();

@@ -6,6 +6,7 @@
     "scripts": {
         "start": "node src/server.js",
         "test": "jest",
+        "proc-start": "pm2 start src/server.js --log stark.log",
         "cluster": "pm2 start src/server.js -i max"
     },
     "author": "rafaelvsgaia@gmail.com",

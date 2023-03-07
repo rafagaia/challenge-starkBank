@@ -8,7 +8,7 @@ Due date: Thursday, March 9th, 2023</br>
 Author: Rafael Gaia</br>
 </br>
 
-# Challenge Requirements
+## Challenge Requirements
 </br>
 0. Create a Project within Stark Bank Sandbox Workspace as an Admin.</br>
 0.1. Create Webhook Endpoint (WHE1) for that account.</br>
@@ -30,21 +30,15 @@ Author: Rafael Gaia</br>
 </br>
 4. Bonus: Deploy application in the cloud (such as AWS, GCP, or Azure).</br>
 4.1. Bonus: find issues on Stark Bank public code or API.</br>
-4.1.1. Invoice can be created with an unregistered customer and taxId. Registers customer.
-4.1.2. Invoice creation with existing customer taxId and new name overwrites previous customer name.
-4.1.3. Customer name-length can be abnormously big, and contain special characters such as $!@(...).
+4.1.1. Invoice can be created with an unregistered customer and taxId. Registers customer.</br>
+4.1.2. Invoice creation with existing customer taxId and new name overwrites previous customer name.</br>
+4.1.3. Customer name-length can be abnormously big, and contain special characters such as $!@(...).</br>
 4.2. Have fun and good luck!</br>
 </br>
 
-# Specifications
+## Specifications
 
 Stack of choice to solve challenge:</br>
 - Application: Nodejs, Express</br>
 - Tests: jest, supertest</br>
 - Cloud: AWS EC2 (free tier) + PM2</br>
-
-# Setup
-
-To test the app, follow steps:</br>
-
-...
