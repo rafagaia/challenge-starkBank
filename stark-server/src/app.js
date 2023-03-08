@@ -15,6 +15,9 @@ app.use(cors({
     ],
 }));
 
+// For better logs
+app.use(morgan('dev'));
+
 /*
 * StarkBank API Reference states that
 *   the API speaks exclusively in JSON.
