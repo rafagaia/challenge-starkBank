@@ -5,3 +5,4 @@ snippets
 # misc
 .DS_Store
 .env
+stark*.log
